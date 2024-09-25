@@ -1,0 +1,20 @@
+@mixin line-gray {
+  width: 2px;
+  height: 32px;
+  background-color: $grayLine;
+  display: inline-block;
+  content: '';
+}
+@mixin fontXL {
+  font-family: 'TT Lakes Bold';
+  font-size: 24px;
+  line-height: 40px;
+}
+@mixin fontM {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin opacity {
+  opacity: 0.8;
+}

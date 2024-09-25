@@ -1,0 +1,95 @@
+.side-box {
+  display: none;
+  background-color: $bgColorWhite;
+  padding: 16px;
+  height: 100vh;
+  gap: 32px;
+  .nav-side {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    &__list {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+  .nav-header {
+    &__item:hover::before {
+      border-top: none;
+
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 40px;
+      border-radius: 0 5px 5px 0;
+      background-color: $blueLine;
+    }
+    &__item:hover {
+      border: none;
+      gap: 8px;
+      @include opacity;
+    }
+    &__item {
+      justify-content: flex-start;
+    }
+    &__list {
+      display: flex;
+      align-items: end;
+      .nav-header__link {
+        color: $textBlack;
+      }
+    }
+  }
+  .side-bot {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .nav-list-contact {
+      display: flex;
+      gap: 16px;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &__mail {
+        color: $textBlack;
+        font-style: normal;
+      }
+      &__mail:hover {
+        @include opacity;
+      }
+      &__phone {
+        color: $textBlack;
+        @include fontXL;
+        font-style: normal;
+      }
+      &__phone:hover {
+        @include opacity;
+      }
+    }
+    .lang-switch {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .side-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 320px;
+    .nav-header {
+      margin-bottom: auto;
+    }
+    .nav-side__list {
+      .nav-side__item {
+        display: none;
+      }
+    }
+  }
+}

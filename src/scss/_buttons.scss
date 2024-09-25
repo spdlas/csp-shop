@@ -1,0 +1,21 @@
+.button-circle {
+  background-color: $bgButtonCircle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.about-text {
+  display: flex;
+  align-items: center;
+  img {
+    transition-duration: 1s;
+  }
+}
+
+.about-text--rotate {
+  img {
+    transform: rotate(-180deg);
+    transition-duration: 1s;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../scss/mixin';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__more {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease;
+  }
+  .about-text--open {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+  }
+}

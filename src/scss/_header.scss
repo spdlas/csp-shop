@@ -1,0 +1,100 @@
+@import '../scss/mixin';
+.header-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.nav-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .nav-list-contact {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .logo:hover {
+    @include opacity;
+  }
+  .logo::after {
+    @include line-gray;
+  }
+}
+
+.nav-header {
+  &__list {
+    display: flex;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  &__item {
+    min-width: 248px;
+    min-height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item:hover {
+    border: solid $borderLG 2px;
+    cursor: pointer;
+    background-color: $bgColorWhite;
+  }
+  &__link {
+    color: $textColorGray;
+    @include fontM;
+  }
+  h1 {
+    @include fontXL;
+    display: flex;
+    gap: 16px;
+    margin-left: -16px;
+  }
+  h1::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    background-color: $blueLine;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-mobile {
+    .nav-list-contact {
+      display: flex;
+      margin-left: auto;
+    }
+    .nav-list-contact::after {
+      @include line-gray;
+    }
+    .logo::after {
+      display: none;
+    }
+    .logo::before {
+      @include line-gray;
+    }
+  }
+  .nav-header {
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav-mobile {
+    display: none;
+  }
+}
