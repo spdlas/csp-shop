@@ -7,6 +7,7 @@
 @import '../scss/about';
 @import '../scss/asides';
 @import '../scss/sliders';
+@import '../scss/footer';
 html {
   box-sizing: border-box;
 }
@@ -38,16 +39,24 @@ a {
   text-decoration: none;
 }
 
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+}
+
 .page {
   background: $bgColorMain;
   font-family: 'TT Lakes Medium';
 }
 
 .main {
-  padding: 16px;
+  padding: 16px 0px 16px 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
 }
 
 @media (min-width: 1440px) {
@@ -71,7 +80,7 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный черный */
-  z-index: 1; /* слой должен быть под бургер-меню, но над контентом */
+  z-index: 100; /* слой должен быть под бургер-меню, но над контентом */
   display: none; /* по умолчанию скрыт */
 }
 

@@ -1,0 +1,213 @@
+.button-swiper {
+  border-radius: 50%;
+}
+
+.slider-idk {
+  display: block;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  h2 {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    color: $textColorGray;
+    display: block;
+    border-top: solid rgba(217, 255, 245, 1) 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(248, 248, 248, 1),
+      rgba(255, 255, 255, 1)
+    );
+  }
+}
+
+.swiper-tech {
+  box-sizing: border-box;
+  min-width: 280px;
+  max-width: 1120px;
+  height: 210px;
+  transition-duration: 0.4s;
+
+  .swiper-wrapper {
+    padding-top: 16px;
+    gap: 16px;
+  }
+
+  .swiper-slide {
+    background-color: $bgColorWhite;
+    border: solid 1px $grayLine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 240px;
+    height: 160px;
+    box-sizing: border-box;
+    padding: 8px;
+    position: relative;
+    .swiper-item__title {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+    .button-swiper {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+}
+
+.swiper-partners {
+  box-sizing: border-box;
+  min-width: 280px;
+  max-width: 1120px;
+  height: 120px;
+  transition-duration: 0.4s;
+
+  .swiper-wrapper {
+    padding-top: 16px;
+    gap: 16px;
+  }
+
+  .swiper-slide {
+    background-color: $bgColorWhite;
+    border: solid 1px $grayLine;
+    max-width: 240px;
+    max-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination {
+    display: none;
+  }
+  .slider-idk {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .swiper-partners {
+    height: 180px;
+    margin: 0;
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+  .swiper-tech {
+    height: 180px;
+    margin: 0;
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.swiper-price {
+  .swiper-wrapper {
+    .swiper-slide:nth-child(1) {
+      display: none;
+    }
+    .swiper-slide {
+      width: 260px;
+      height: 200px;
+      background-color: $bgColorWhite;
+      padding: 16px;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: 'TT Lakes Medium';
+      &__special {
+        display: flex;
+        justify-content: space-between;
+      }
+      .swiper-slide__h {
+        color: $textGray;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-price {
+    margin: 0;
+    .swiper-wrapper {
+      flex-direction: column;
+      gap: 0;
+      background: $bgColorWhite;
+      .swiper-slide:last-child {
+        border-bottom: none;
+      }
+      .swiper-slide:nth-child(1) {
+        background-color: $bgColorMain;
+        display: flex;
+        border: none;
+        .swiper-slide__h {
+          display: block;
+          color: $textColorGray;
+        }
+      }
+      .swiper-slide {
+        flex-direction: row;
+        height: 50px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 2px $grayLine;
+        &__w:nth-first-child(1) {
+          width: 370px;
+        }
+        &__item:nth-child(1) {
+          width: 348px;
+        }
+        &__item:nth-child(2) {
+          width: 73px;
+        }
+
+        &__h {
+          display: none;
+        }
+        &__special {
+          gap: 8px;
+          align-items: center;
+          width: 225px;
+          margin-right: 32px;
+          .swiper-slide__item:nth-child(1) {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-price {
+  font-family: 'TT Lakes Medium';
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 421px;
+  &__text {
+    color: $textColorGray;
+  }
+  &__commer:hover {
+    cursor: pointer;
+    @include opacity;
+  }
+  &__commer {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}

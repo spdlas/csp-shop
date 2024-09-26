@@ -1,0 +1,29 @@
+@import '../scss/mixin';
+.page-footer {
+  font-family: 'TT Lakes Medium';
+  font-size: 14px;
+  color: $textColorGray;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-direction: column;
+  text-align: center;
+  padding-right: 16px;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    &__item {
+      max-width: 218px;
+    }
+    &__item:nth-child(1) {
+      text-align: left;
+    }
+    &__item:nth-child(3) {
+      text-align: right;
+    }
+  }
+}

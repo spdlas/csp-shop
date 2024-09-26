@@ -6,14 +6,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 102;
   background: rgba(0, 0, 0, 0.8);
   background-color: $bgColorWhite;
   padding: 16px;
   height: 100vh;
   width: 100%;
   gap: 32px;
-  overflow: auto;
+  overflow-y: auto;
   .nav-side {
     display: flex;
     justify-content: space-between;
@@ -97,12 +97,179 @@
 @media (min-width: 1440px) {
   .side-box {
     display: flex;
-    position: relative;
+    position: sticky;
+    z-index: 1;
+    top: 0;
 
     .nav-side__list {
       .nav-side__item {
         display: none;
       }
+    }
+  }
+}
+
+.feedback {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+  background-color: $bgColorWhite;
+  max-width: 320px;
+  padding: 16px;
+  z-index: 102;
+  height: 100vh;
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  h2 {
+    font-family: 'TT Lakes Bold';
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  h2::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    background-color: $blueLine;
+    margin-left: -16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item input {
+    width: 288px;
+    border-radius: 8px;
+    border: solid $grayLine 1px;
+    padding-left: 8px;
+    height: 48px;
+  }
+  &__item input::placeholder {
+    color: $textGray;
+    @include fontM;
+  }
+  &__item input:focus {
+    border: $blueLine 2px solid;
+  }
+  &__item textarea {
+    width: 288px;
+    height: 118px;
+    resize: none;
+    border-radius: 8px;
+    border: solid $grayLine 1px;
+    color: $textGray;
+    padding-top: 8px;
+    padding-left: 8px;
+    color: $textBlack;
+  }
+  &__item textarea::placeholder {
+    color: $textGray;
+    @include fontM;
+  }
+  &__item textarea:focus {
+    border: $blueLine 2px solid;
+  }
+  .send {
+    align-self: flex-end;
+  }
+  mark {
+    color: $bgButtonCircle;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  mark:hover {
+    @include opacity;
+  }
+}
+.feedback--open {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .feedback {
+    .button-circle {
+      position: absolute;
+      top: 35px;
+      left: -55px;
+    }
+  }
+}
+
+.callback {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  background-color: $bgColorWhite;
+  max-width: 320px;
+  padding: 16px;
+  z-index: 1022;
+  height: 100vh;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  h2 {
+    font-family: 'TT Lakes Bold';
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  h2::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    background-color: $blueLine;
+    margin-left: -16px;
+  }
+  section {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .send {
+    align-self: flex-end;
+  }
+  mark {
+    color: $bgButtonCircle;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  mark:hover {
+    @include opacity;
+  }
+}
+
+.callback--open {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+@media (min-width: 768px) {
+  .callback {
+    .button-circle {
+      position: absolute;
+      top: 35px;
+      left: -55px;
     }
   }
 }
