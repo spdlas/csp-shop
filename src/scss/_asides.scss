@@ -1,13 +1,22 @@
 .side-box {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 320px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
   background-color: $bgColorWhite;
   padding: 16px;
   height: 100vh;
+  width: 100%;
   gap: 32px;
+  overflow: auto;
   .nav-side {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
     &__list {
       display: flex;
@@ -16,6 +25,7 @@
     }
   }
   .nav-header {
+    margin-bottom: auto;
     &__item:hover::before {
       border-top: none;
 
@@ -36,7 +46,10 @@
     }
     &__list {
       display: flex;
-      align-items: end;
+      align-items: start;
+
+      flex-direction: column;
+
       .nav-header__link {
         color: $textBlack;
       }
@@ -77,15 +90,15 @@
   }
 }
 
+.side-box--open {
+  display: flex;
+}
+
 @media (min-width: 1440px) {
   .side-box {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 320px;
-    .nav-header {
-      margin-bottom: auto;
-    }
+    position: relative;
+
     .nav-side__list {
       .nav-side__item {
         display: none;

@@ -1,6 +1,7 @@
 import '../scss/style.scss'
 import Swiper from 'swiper'
-import '../js/open'
+import '../js/openBlock'
+import '../js/burgers'
 
 // import styles bundle
 function initSwiper() {

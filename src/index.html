@@ -10,17 +10,20 @@
     <title>CSP</title>
   </head>
   <body>
+    <div class="overlay" id="overlay"></div>
     <div class="page">
       <aside class="side-box">
         <nav class="nav-side">
           <ul class="nav-side__list">
             <li class="nav-side__item">
-              <button class="button-circle">
-                <img src="img/icon_menu.svg" alt="" />
+              <button class="button-circle" id="closeBurgerLeft">
+                <img src="img/icon_closemenu.svg" alt="" />
               </button>
             </li>
             <li>
-              <a class="logo"><img src="img/logo.svg" alt="" /></a>
+              <a class="logo" href=""
+                ><img src="img/logo.svg" alt="Логотип"
+              /></a>
             </li>
           </ul>
           <ul class="nav-list-search">
@@ -91,7 +94,7 @@
           <nav class="nav-mobile">
             <ul class="nav-mobile__list">
               <li class="nav-mobile__item">
-                <button class="button-circle">
+                <button class="button-circle" id="burgerLeft">
                   <img src="img/icon_menu.svg" alt="Кнопка меню" />
                 </button>
               </li>

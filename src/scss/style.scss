@@ -6,14 +6,17 @@
 @import '../scss/buttons';
 @import '../scss/about';
 @import '../scss/asides';
+@import '../scss/sliders';
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 button {
   background: none;
   border: none;
@@ -49,10 +52,29 @@ a {
 
 @media (min-width: 1440px) {
   .main {
-    max-width: 1440px;
+    max-width: 1600px;
   }
   .page {
     display: flex;
     justify-content: center;
   }
+}
+
+.logo:hover {
+  @include opacity;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный черный */
+  z-index: 1; /* слой должен быть под бургер-меню, но над контентом */
+  display: none; /* по умолчанию скрыт */
+}
+
+.overlay--active {
+  display: block;
 }

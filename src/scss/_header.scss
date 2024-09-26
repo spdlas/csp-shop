@@ -22,9 +22,7 @@
     gap: 16px;
     align-items: center;
   }
-  .logo:hover {
-    @include opacity;
-  }
+
   .logo::after {
     @include line-gray;
   }
@@ -89,6 +87,7 @@
   .nav-header {
     &__list {
       flex-wrap: wrap;
+      overflow: hidden;
     }
   }
 }
