@@ -1631,6 +1631,10 @@ template {
   text-align: center;
   padding-right: 16px;
   margin-top: 50px; }
+  .page-footer a {
+    color: #7e7e82; }
+  .page-footer a:hover {
+    opacity: 0.8; }
 
 @media (min-width: 768px) {
   .page-footer {
