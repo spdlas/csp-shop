@@ -1267,7 +1267,8 @@ template {
       gap: 16px;
       align-items: center; }
   .side-box .nav-header {
-    margin-bottom: auto; }
+    margin-bottom: auto;
+    overflow: hidden; }
     .side-box .nav-header__item:hover::before {
       border-top: none;
       content: '';
