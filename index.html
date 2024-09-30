@@ -10,7 +10,7 @@
     <div class="overlay" id="overlay"></div>
     <div class="page">
       <aside class="side-box">
-        <nav class="nav-side">
+        <header class="nav-side">
           <ul class="nav-side__list">
             <li class="nav-side__item">
               <button class="button-circle" id="closeBurgerLeft">
@@ -28,7 +28,7 @@
               </button>
             </li>
           </ul>
-        </nav>
+        </header>
         <nav class="nav-header">
           <ul class="nav-header__list">
             <li class="nav-header__item">
@@ -51,7 +51,7 @@
             </li>
           </ul>
         </nav>
-        <section class="side-bot">
+        <footer class="side-bot">
           <ul class="nav-list-contact">
             <li class="nav-mobile__item">
               <button class="button-circle" id="buttonCall2">
@@ -78,7 +78,7 @@
             <li><button class="lang-switch__button">EN</button></li>
             <li><button class="lang-switch__button">CH</button></li>
           </ul>
-        </section>
+        </footer>
       </aside>
       <div class="main">
         <header class="header-page">
@@ -124,7 +124,27 @@
             </ul>
           </nav>
           <nav class="nav-header">
-            <h1>Услуги и сервисы</h1>
+            <div class="page-menu">
+              <h1>Услуги и сервисы</h1>
+              <ul class="page-menu__list">
+                <li class="page-menu__item">
+                  <button class="button-text">
+                    Оставить заявку
+                    <div class="button-circle">
+                      <img src="img/icon_repair.svg" alt="">
+                    </div>
+                  </button>
+                </li>
+                <li class="page-menu__item">
+                  <button class="button-text">
+                    Статус ремонта
+                    <div class="button-circle">
+                      <img src="img/icon_search.svg" alt="">
+                    </div>
+                  </button>
+                </li>
+              </ul>
+            </div>
             <ul class="nav-header__list">
               <li class="nav-header__item">
                 <a href="" class="nav-header__link">Ремонтируемые устройства</a>
@@ -380,7 +400,6 @@
                     <div class="swiper-slide__w">30 мин</div>
                   </div>
                   <button class="send" id="">
-                    ЗАКАЗАТЬ
                     <img src="img/icon_send.svg" alt="картинка отправить">
                   </button>
                 </div>
@@ -400,7 +419,6 @@
                     <div class="swiper-slide__w">30-120 мин</div>
                   </div>
                   <button class="send" id="">
-                    ЗАКАЗАТЬ
                     <img src="img/icon_send.svg" alt="картинка отправить">
                   </button>
                 </div>
@@ -422,7 +440,6 @@
                     <div class="swiper-slide__w">30-120 мин</div>
                   </div>
                   <button class="send" id="">
-                    ЗАКАЗАТЬ
                     <img src="img/icon_send.svg" alt="картинка отправить">
                   </button>
                 </div>
@@ -444,7 +461,6 @@
                     <div class="swiper-slide__w">30-120 мин</div>
                   </div>
                   <button class="send" id="">
-                    ЗАКАЗАТЬ
                     <img src="img/icon_send.svg" alt="картинка отправить">
                   </button>
                 </div>
@@ -466,15 +482,15 @@
                     <div class="swiper-slide__w">30-120 мин</div>
                   </div>
                   <button class="send" id="">
-                    ЗАКАЗАТЬ
                     <img src="img/icon_send.svg" alt="картинка отправить">
                   </button>
                 </div>
               </li>
             </ul>
-            
             <div class="swiper-pagination"></div>
+            
           </div>
+
           <div class="about-price">
             <div class="about-price__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на
               единичную услугу. Для получения коммерческого предложения на
@@ -506,7 +522,6 @@
               <mark>политикой конфиденциальности</mark>
             </div>
             <button class="send" id="buttonSend">
-              ОТПРАВИТЬ
               <img src="img/icon_send.svg" alt="картинка отправить">
             </button>
           </section>
@@ -527,7 +542,6 @@
               <mark>политикой конфиденциальности</mark>
             </div>
             <button class="send" id="buttonSendCall">
-              ОТПРАВИТЬ
               <img src="img/icon_send.svg" alt="картинка отправить">
             </button>
           </section>
